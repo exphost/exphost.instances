@@ -4,8 +4,8 @@
 
 - name: manager instance
   include_role:
-    name: "exphost.instances.{{instance.value.provider}}"
-  loop: "{{iac|dict2items}}"
+    name: "exphost.instances.{{ instance.value.provider }}"
+  loop: "{{ iac|dict2items }}"
   loop_control:
-    label: 'to jest label {{instance.key}}'
+    label: 'to jest label {{ instance.key }}'
     loop_var: instance
