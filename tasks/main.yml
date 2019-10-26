@@ -5,7 +5,7 @@
 - name: manager instance
   include_role:
     name: "{{ instance.value.provider }}"
-  loop: "{{ iac|dict2items }}"
+  loop: "{{ iac.hosts|dict2items }}"
   loop_control:
     label: 'to jest label {{ instance.key }}'
     loop_var: instance
